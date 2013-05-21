@@ -1,0 +1,107 @@
+﻿#TaskContainer {
+	width: 700px;
+	margin: 0 auto;
+	font-family: Verdana;
+	font-size: 14px;
+}
+
+#TaskList{
+	color: gray;
+	margin: 0;
+}
+h1{
+	text-align: center;
+	color: #006699;
+}
+
+.ActiveTask, .CompletedTask {
+	height: 45px;
+	width: 600px;
+	font-size: 16px;
+	margin-bottom: 5px;
+	border: solid 2px;
+	border-radius: 5px;
+}
+
+.ActiveTask {
+	border-color: #006699;
+	background-color: lightblue;
+}
+
+.CompletedTask {
+	color: gray;
+	background-color: lightgray;
+}
+
+.ActiveTaskText, .CompletedTaskText{
+	display: inline-block;
+	margin: 10px 5px;
+}
+
+.ActiveTaskText{
+	color: #006699;
+}
+
+.CompletedTaskText{
+	color: gray;
+	text-decoration: line-through;
+}
+
+.TaskDate{
+	position: absolute;
+	font-size: 8px;
+	color: gray;
+}
+
+.Selected{
+	background-color: white;
+}
+
+.CheckTask{
+	float: right;
+	margin: 14px 5px;
+	display: none;
+}
+
+.DeleteTask{
+	float: right;
+	margin: 5px;
+	display: none;
+	cursor: pointer;
+}
+#NewTaskMessage{
+	width: 500px;
+	height: 40px;
+	margin-left: 38px;
+	border-radius: 5px;
+	font-size: 14px;
+	background-image: url(images/EnterNewTask.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+#TaskEdit{
+	width:500px;
+	height:40px;
+	background-color: lightyellow;
+	border-radius: 5px;
+	overflow:hidden;
+}
+
+#SaveButton, #AddButton, #DeleteAllCompletedTaskButton{
+	font-size: 14px;
+	height: 30px;
+}
+#SaveButton{
+	position: relative;
+	top: -18px;
+	left: 20px;
+}
+#AddButton{
+	margin-left: 10px;
+}
+#DeleteAllCompletedTaskButton{
+	display: none;
+	position: relative;
+	float:right;
+	right: 55px;
+}
