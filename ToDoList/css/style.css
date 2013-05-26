@@ -1,7 +1,7 @@
 ﻿#TaskContainer {
 	width: 700px;
 	margin: 0 auto;
-	font-family: Verdana;
+	font-family: Verdana, sans-serif;
 	font-size: 14px;
 }
 
@@ -9,14 +9,14 @@
 	color: gray;
 	margin: 0;
 }
+
 h1{
 	text-align: center;
 	color: #006699;
 }
 
 .ActiveTask, .CompletedTask {
-	height: 45px;
-	width: 600px;
+	width: 650px;
 	font-size: 16px;
 	margin-bottom: 5px;
 	border: solid 2px;
@@ -34,8 +34,9 @@ h1{
 }
 
 .ActiveTaskText, .CompletedTaskText{
+	width: 500px;
 	display: inline-block;
-	margin: 10px 5px;
+	margin: 10px 0 10px 5px;
 }
 
 .ActiveTaskText{
@@ -47,37 +48,51 @@ h1{
 	text-decoration: line-through;
 }
 
+.TaskDate, .TaskAuthor{
+	float:left;
+	font-size: 10px;
+}
 .TaskDate{
-	position: absolute;
-	font-size: 8px;
 	color: gray;
+}
+
+.TaskAuthor{
+    margin-left: 10px;
+    color: #006699;
 }
 
 .Selected{
 	background-color: white;
 }
 
-.CheckTask{
+.UpTask, .CheckTask, .DeleteTask{
 	float: right;
-	margin: 14px 5px;
 	display: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.CheckTask{
+    margin-top: 11px;
+    margin-right: 2px;
+}
+
+.UpTask{
+    margin-top: 8px;
+    margin-right: 6px;
 }
 
 .DeleteTask{
-	float: right;
-	margin: 5px;
-	display: none;
-	cursor: pointer;
+    margin-right: 5px;
 }
+
 #NewTaskMessage{
 	width: 500px;
 	height: 40px;
-	margin-left: 38px;
+	margin-left: 40px;
 	border-radius: 5px;
 	font-size: 14px;
-	background-image: url(images/EnterNewTask.png);
-	background-position: right center;
-	background-repeat: no-repeat;
+    background: url(../images/EnterNewTask.png) no-repeat right center;
 }
 #TaskEdit{
 	width:500px;
@@ -97,11 +112,14 @@ h1{
 	left: 20px;
 }
 #AddButton{
+    position: relative;
+    top: -20px;
 	margin-left: 10px;
 }
 #DeleteAllCompletedTaskButton{
 	display: none;
 	position: relative;
 	float:right;
-	right: 55px;
+    top: -15px;
+	right: 5px;
 }

@@ -4,13 +4,41 @@
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="scripts/jquery.tmpl.min.js"></script>
+        <script type="text/javascript" src="scripts/DataModel.js"></script>
 		<script type="text/javascript" src="scripts/ToDoList.js"></script>
+        <script id="AddTaskFormTemplate" type="text/x-jquery-tmpl">
+            <form id="${formID}" action="#">
+                <textarea rows="5" cols="25" id="${textAreaID}"></textarea>
+                <input type="submit" value="Add Task" id="${buttonID}" disabled="true">
+            </form>
+        </script>
+        <script id="TaskTemplate" type="text/x-jquery-tmpl">
+            <li class="${$item.liClass}" id="${dateInMilliseconds}">
+                <span class="${$item.taskTextClass}"> ${message} <br>
+                    <span class="TaskDate"> ${date} </span>
+                    <span class="TaskAuthor"> ${userName} </span>
+                </span>
+                <img class="DeleteTask" src="images/delete.png" title="Delete this task.">
+                <img class="CheckTask" src="images/${$item.checked}" title="Check this task as completed/active.">
+                {{if $item.liClass == "ActiveTask"}}
+                    <img class="UpTask" src="images/arrow_up.png" title="Move this task up.">
+                {{/if}}
+            </li>
+        </script>
+        <script type="text/javascript">
+            $(function (){
+                new ToDoList("#tabs-1");
+            });
+        </script>
 	</head>
 	<body>
 		<div id="TaskContainer">
 			<h1>To Do List</h1>
 			<div id="tabs-1">
 			</div>
+            <div id="tabs-2">
+            </div>
 		</div>
 	</body>
 </html>
